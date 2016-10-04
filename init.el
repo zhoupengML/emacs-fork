@@ -187,7 +187,7 @@
   (interactive) (find-alternate-file "..")))
 
 ;;;******************************
-(load "flycheck-autoloads")
+;; (load "flycheck-autoloads")
 
 ;;;******************************
 ;; (require 'ctags)
