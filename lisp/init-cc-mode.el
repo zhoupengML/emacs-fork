@@ -16,9 +16,9 @@
 
 (defun my-common-cc-mode-setup ()
   "setup shared by all languages (java/groovy/c++ ...)"
-  (setq c-basic-offset 4)
+  (setq c-basic-offset 2)
   ;; give me NO newline automatically after electric expressions are entered
-  (setq c-auto-newline nil)
+  (setq c-auto-newline t)
 
   ;; syntax-highlight aggressively
   ;; (setq font-lock-support-mode 'lazy-lock-mode)
@@ -27,7 +27,7 @@
 
   ;make DEL take all previous whitespace with it
   (c-toggle-hungry-state 1)
-
+  (c-toggle-auto-newline -1)
   ;; indent
   ;; google "C/C++/Java code indentation in Emacs" for more advanced skills
   ;; C code:

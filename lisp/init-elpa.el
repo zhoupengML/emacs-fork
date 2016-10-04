@@ -1,6 +1,6 @@
 (require 'package)
 
-;; You can set it to `t' to use safer HTTPS to download packages
+;;; You can set it to `t' to use safer HTTPS to download packages
 (defvar melpa-use-https-repo nil
   "By default, HTTP is used to download packages.
 But you may use safer HTTPS instead.")
@@ -60,14 +60,14 @@ But you may use safer HTTPS instead.")
 (if melpa-use-https-repo
     (setq package-archives
           '(;; uncomment below line if you need use GNU ELPA
-            ;; ("gnu" . "https://elpa.gnu.org/packages/")
+             ("gnu" . "https://elpa.gnu.org/packages/")
             ("melpa" . "https://melpa.org/packages/")
-            ("melpa-stable" . "https://stable.melpa.org/packages/")))
+            ("melpa-stable" . "https://melpa.org/packages/")))
   (setq package-archives
         '(;; uncomment below line if you need use GNU ELPA
-          ;; ("gnu" . "http://elpa.gnu.org/packages/")
-          ("melpa" . "http://melpa.org/packages/")
-          ("melpa-stable" . "http://stable.melpa.org/packages/")))
+           ("gnu" . "http://elpa.gnu.org/packages/")
+          ;; ("melpa" . "http://melpa.org/packages/")
+          ("melpa-stable" . "http://melpa.org/packages/")))
   )
 
 
@@ -134,7 +134,7 @@ ARCHIVE is the string name of the package archive.")
             (string-match (format "%s" package) "-theme"))))
 
 ;; un-comment below code if you prefer use all the package on melpa (unstable) without limitation
-;; (setq package-filter-function nil)
+ (setq package-filter-function nil)
 
 ;;------------------------------------------------------------------------------
 ;; Fire up package.el and ensure the following packages are installed.
@@ -145,7 +145,7 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'async)
 (require-package 'dash) ; required by string-edit
 ; color-theme 6.6.1 in elpa is buggy
-(require-package 'color-theme)
+;; (require-package 'color-theme)
 (require-package 'auto-compile)
 (require-package 'avy)
 (require-package 'auto-yasnippet)

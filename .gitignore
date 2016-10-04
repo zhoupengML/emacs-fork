@@ -1,3 +1,6 @@
+log
+*.bak
+bookmarks
 .depend
 pyim/
 anaconda-mode/
